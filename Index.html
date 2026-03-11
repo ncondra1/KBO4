@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallas Storage & Flex Investment Opportunity</title>
+<style>
+:root {
+  --font-family-display: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-weight-display: 600;
+  --font-family-content: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-weight-content: 400;
+  --font-size-content: 16px;
+  --line-height-content: 1.4;
+}
+
+body.theme-dark {
+  --color-bg-base: #F8F9FA;
+  --color-bg-elevated: #ffffff;
+  --color-bg-surface: #e8ecf3;
+  --color-bg-muted: #d1d9e6;
+  --color-text-primary: #333333;
+  --color-text-secondary: #555555;
+  --color-text-muted: #777777;
+  --color-text-accent: #2C5F7B;
+  --color-primary: #2C5F7B;
+  --color-primary-foreground: #ffffff;
+  --color-accent-gold: #E8A838;
+  --color-accent-gold-light: #F5B84A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-content);
+  font-weight: var(--font-weight-content);
+  font-size: var(--font-size-content);
+  line-height: var(--line-height-content);
+  overflow-x: hidden;
+}
+
+.slide {
+  width: 960px;
+  height: 540px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+    background-image: url('kbo-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+.row { flex-direction: row; }
+.col { flex-direction: column; }
+.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.space-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.fill-width { flex: 1; }
+.fill-height { flex: 1; display: flex; flex-direction: column; }
+
+.gap-sm { gap: 0.5rem; }
+.gap-md { gap: 1rem; }
+.gap-lg { gap: 1.5rem; }
+.gap-xl { gap: 2rem; }
+
+.p-4 { padding: 1rem; }
+.p-8 { padding: 2rem; }
+.p-12 { padding: 3rem; }
+.p-16 { padding: 4rem; }
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-display);
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+
+.text-6xl { font-size: 3.75rem; }
+.text-5xl { font-size: 3rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-xl { font-size: 1.25rem; }
+.text-lg { font-size: 1.125rem; }
+.text-base { font-size: 1rem; }
+.text-sm { font-size: 0.875rem; }
+
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-normal { font-weight: 400; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+.opacity-90 { opacity: 0.9; }
+.opacity-80 { opacity: 0.8; }
+
+ul, ol {
+  margin-left: 2rem;
+  line-height: 1.8;
+}
+
+ul li { list-style: disc; }
+li { margin-bottom: 0.75rem; }
+li:last-child { margin-bottom: 0; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chart-bar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.chart-bar-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.chart-bar-label {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.highlight-box {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 4px solid;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.two-col-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+img.map-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(37, 99, 235, 0.4);
+}
+
+.card-enhanced {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.1);
+}
+
+.metric-row:last-child {
+  border-bottom: none;
+}
+
+.icon-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.icon-bullet::before {
+  content: "▸";
+  color: #38bdf8;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   PRESENTATION CONTAINER & NAVIGATION STYLES
+   ============================================ */
+
+.presentation-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: relative;
+  min-height: 100vh;
+  animation: slideFadeIn 0.4s ease-in-out;
+}
+
+.slide.active {
+  display: flex;
+}
+
+@keyframes slideFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation Bar */
+.slide-nav {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 100;
+  background: rgba(0,0,0,0.18);
+  backdrop-filter: blur(6px);
+  border-radius: 2rem;
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+}
+
+.slide-nav button {
+  background: rgba(44,95,123,0.85);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.slide-nav button:hover {
+  background: rgba(44,95,123,1);
+  transform: scale(1.1);
+}
+
+.slide-nav button:disabled {
+  background: rgba(150,150,150,0.45);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.slide-nav .slide-counter {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 4.5rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.slide-nav .slide-title-label {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.78rem;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .slide-nav .slide-title-label { display: block; }
+}
+
+/* Slide progress dots */
+.slide-dots {
+  position: fixed;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  z-index: 200;
+}
+
+.slide-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  padding: 0;
+}
+
+.slide-dots .dot.active {
+  background: #2C5F7B;
+  transform: scale(1.4);
+}
+
+.slide-dots .dot:hover {
+  background: rgba(44,95,123,0.8);
+}
+/* === ENHANCEMENTS === */
+@keyframes growBar { from { width: 0 !important; } to {} }
+.animated-bar { animation: growBar 1.2s cubic-bezier(0.4,0,0.2,1) both; }
+.bar-local { animation-delay: 0.1s; }
+.bar-regional { animation-delay: 0.4s; }
+/* Sensitivity tooltip */
+.sens-cell { position: relative; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+.sens-cell:hover { transform: scale(1.08); box-shadow: 0 4px 16px rgba(0,0,0,0.25); z-index: 10; }
+.sens-tooltip { display: none; position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%);
+  background: #1a3a4d; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 0.78rem;
+  white-space: nowrap; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.4); min-width: 160px; text-align: center; }
+.sens-tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 6px solid transparent; border-top-color: #1a3a4d; }
+.sens-cell:hover .sens-tooltip { display: block; }
+/* Progress bar nav */
+.progress-bar-container { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: rgba(255,255,255,0.2); }
+.progress-bar-fill { height: 100%; background: linear-gradient(90deg, #2C5F7B, #E8A838); transition: width 0.4s ease; }
+/* Chart canvas */
+.chart-canvas-wrap { display: flex; justify-content: center; align-items: center; }
+/* Donut chart */
+#donutChart { max-width: 280px; }
+/* Lease-up chart */
+#leaseupChart { width: 100%; max-height: 280px; }
+/* IRR scenarios */
+.irr-scenario-card { border-radius: 10px; padding: 1rem 1.5rem; text-align: center; flex: 1; }
+.irr-card-bear { background: linear-gradient(135deg, #fff5f5, #ffe0e0); border: 2px solid #ef4444; }
+.irr-card-base { background: linear-gradient(135deg, #f0fdf4, #d1fae5); border: 2px solid #22c55e; }
+.irr-card-bull { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 2px solid #3b82f6; }
+.irr-scenario-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+.irr-big-num { font-size: 2rem; font-weight: 700; margin: 0.25rem 0; }
+.irr-sub { font-size: 0.75rem; color: #555; }
+</style>
+</head>
+<body class="theme-dark">
+  <main id="presentation" class="presentation-container">
+    <nav class="slide-dots" id="slideDots" aria-label="Slide navigation"></nav>
+
+<!-- Title Slide -->
+<section id="slide-title" class="slide p-16 col center" style="background: linear-gradient(135deg, #2C5F7B 0%, #1a3a4d 100%); color: #ffffff;">
+  <h1 class="text-6xl mb-4" style="color: #ffffff; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">Dallas Storage &amp; Flex</h1>
+  <p class="text-2xl mb-2" style="color: #ffffff;">Mixed-Use Development Investment Opportunity</p>
+  <p class="text-xl" style="color: #E8A838;">3363 Villa Rica Highway | Dallas, GA</p>
+  <p class="text-sm mt-8" style="color: rgba(255, 255, 255, 0.8);">KBO4, LLC | March 2026</p>
+</section>
+
+<!-- Executive Summary -->
+<section id="slide-executive-summary" class="slide p-16 col" style="background-color: #F8F9FA; color: #333333;">
+  <h2 class="mb-4" style="color: #2C5F7B;">Executive Summary</h2>
+  <ul class="text-lg" style="color: #555555; margin-bottom: 1.25rem;">
+    <li><strong>79,075 SF mixed-use development in high-growth Dallas, GA corridor</strong></li>
+    <li><strong>Target 21.8% levered IRR | 2.49x equity multiple | 8% preferred return</strong></li>
+    <li><strong>$2.7M equity raise (25% of total project cost)</strong></li>
+    <li><strong>Severe supply gap: 3.3 SF/capita vs. 8.2 SF/capita regional average</strong></li>
+  </ul>
+  <div class="stat-grid" style="grid-template-columns: repeat(6, 1fr); gap: 0.75rem;">
+    <div class="stat-box" style="background: linear-gradient(135deg, #ffffff 0%, #f0f5f8 100%); border: 3px solid #2C5F7B; border-radius: 8px; padding: 0.75rem; text-align: center;">
+      <div class="stat-value" style="color: #2C5F7B; font-size: 1.4rem;">$10.8M</div>
+      <div class="stat-label" style="color: #555555; font-size: 0.7rem;">Total Dev Cost</div>
+    </div>
+    <div class="stat-box" style="background: linear-gradient(135deg, #ffffff 0%, #f0f5f8 100%); border: 3px solid #2C5F7B; border-radius: 8px; padding: 0.75rem; text-align: center;">
+      <div class="stat-value" style="color: #2C5F7B; font-size: 1.4rem;">$2.7M</div>
+      <div class="stat-label" style="color: #555555; font-size: 0.7rem;">Equity Required (25%)</div>
+    </div>
+    <div class="stat-box" style="background: linear-gradient(135deg, #ffffff 0%, #f0f5f8 100%); border: 3px solid #2C5F7B; border-radius: 8px; padding: 0.75rem; text-align: center;">
+      <div class="stat-value" style="color: #2C5F7B; font-size: 1.4rem;">$881K</div>
+      <div class="stat-label" style="color: #555555; font-size: 0.7rem;">Stabilized Annual NOI</div>
+    </div>
+    <div class="stat-box" style="background: linear-gradient(135deg, #FFF8E6 0%, #FFF1CC 100%); border: 3px solid #C08820; border-radius: 8px; padding: 0.75rem; text-align: center;">
+      <div class="stat-value" style="color: #C08820; font-size: 1.4rem;">21.8%</div>
+      <div class="stat-label" style="color: #555555; font-size: 0.7rem;">Blended Levered IRR</div>
+    </div>
+    <div class="stat-box" style="background: linear-gradient(135deg, #FFF8E6 0%, #FFF1CC 100%); border: 3px solid #C08820; border-radius: 8px; padding: 0.75rem; text-align: center;">
+      <div class="stat-value" style="color: #C08820; font-size: 1.4rem;">2.49x</div>
+      <div class="stat-label" style="color: #555555; font-size: 0.7rem;">Equity Multiple</div>
+    </div>
+    <div class="stat-box" style="background: linear-gradient(135deg, #FFF8E6 0%, #FFF1CC 100%); border: 3px solid #C08820; border-radius: 8px; padding: 0.75rem; text-align: center;">
+      <div class="stat-value" style="color: #C08820; font-size: 1.4rem;">8.16%</div>
+      <div class="stat-label" style="color: #555555; font-size: 0.7rem;">Yield on Cost</div>
+    </div>
+  </div>
+</section>
+
+<!-- Location & Site -->
+<section id="slide-location-site" class="slide p-16 col" style="background-color: #F8F9FA; color: #333333;">
+  <h2 class="mb-4" style="color: #2C5F7B;">Site Overview & Area Map</h2>
+  <div class="two-col-layout">
+    <div>
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/de4bca76-8f8a-4ee4-b756-402ce294a2a2" class="map-img" alt="Location Map" style="max-height: 500px; object-fit: cover; border: 3px solid rgba(44, 95, 123, 0.4);">
+    </div>
+    <div>
+      <ul class="text-base" style="color: #555555;">
+        <li><strong>7.36 acres</strong> | Fully entitled | Ready to build</li>
+        <li><strong>18,900 AADT</strong> on Villa Rica Highway (high visibility)</li>
+        <li><strong>Adjacent anchors:</strong> Costco, DR Horton, Fischer Homes</li>
+        <li><strong>Zoning:</strong> B-2 with storage SUP approved</li>
+      </ul>
+    </div>
+  </div>
+    <div style="margin-top: 24px; border-top: 2px solid rgba(44, 95, 123, 0.2); padding-top: 20px; text-align: center;">
+    <h3 class="mb-4" style="color: #2C5F7B;">Area Map</h3>
+    <img src="image.jpg" alt="Facility Example" style="max-height: 420px; max-width: 95%; object-fit: contain; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); border: 3px solid rgba(44, 95, 123, 0.4);">
+  </div>
+</section>
+
+<!-- Market Supply Gap -->
+<section id="slide-market-supply" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-6" style="color: #2C5F7B;">Market Supply Analysis</h2>
+  <div class="chart-bar">
+    <div class="chart-bar-label" style="color: #555555;">Local Supply (3-Mile Radius)</div>
+    <div class="chart-bar-fill" style="background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%); width: 40%; animation: growBar 1.2s 0.2s cubic-bezier(0.4,0,0.2,1) both; color: #ffffff;">3.3 SF/Capita</div>
+  </div>
+  <div class="chart-bar">
+    <div class="chart-bar-label" style="color: #555555;">Regional Average</div>
+    <div class="chart-bar-fill" style="background: linear-gradient(90deg, #2C5F7B 0%, #1a3a4d 100%); width: 100%; animation: growBar 1.2s 0.5s cubic-bezier(0.4,0,0.2,1) both; color: #ffffff;">8.2 SF/Capita</div>
+  </div>
+  <div class="highlight-box" style="background: linear-gradient(135deg, #FFF8E6 0%, #FFE5B3 100%); border-left-color: #E8A838;">
+    <p class="text-lg" style="color: #555555;"><strong style="color: #E8A838;">Critical Insight:</strong> 60% undersupplied vs. regional norms | Zero new competing facilities in pipeline</p>
+  </div>
+</section>
+
+<!-- Competition Map -->
+<section id="slide-competition-map" class="slide p-16 col center" style="background-color: #F8F9FA; color: #333333;">
+  <h2 class="mb-4" style="color: #2C5F7B;">Competitive Landscape</h2>
+  <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/a9bb4fe2-5282-42a6-9dbb-9306176a5ece" class="map-img" alt="Competition Map" style="max-height: 420px; max-width: 95%; object-fit: contain; border: 3px solid rgba(44, 95, 123, 0.4);">
+</section>
+
+<!-- Project Components -->
+<section id="slide-project-components" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-6" style="color: #2C5F7B; text-shadow: 0 2px 4px rgba(44, 95, 123, 0.1);">Development Components</h2>
+  <div class="two-col-layout">
+    <div style="background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 18px rgba(0,0,0,0.12); border: 3px solid rgba(44, 95, 123, 0.4);">
+      <h3 class="mb-4" style="color: #2C5F7B; font-size: 1.5rem;">Climate-Ready Storage</h3>
+      <div style="margin-bottom: 1rem; padding: 1rem; background-color: rgba(44, 95, 123, 0.1); border-radius: 4px;">
+        <div style="font-size: 2rem; font-weight: 700; color: #2C5F7B;">20.1%</div>
+        <div style="font-size: 0.875rem; color: #555555;">Levered IRR</div>
+      </div>
+      <ul class="text-base" style="color: #555555; list-style: none; margin-left: 0;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(44, 95, 123,0.15);">▸ 490 units / 56,475 SF</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(44, 95, 123,0.15);">▸ Durable needs-based cash flow</li>
+        <li style="padding: 0.5rem 0;">▸ 7.5% yield on cost</li>
+      </ul>
+    </div>
+    <div style="background: linear-gradient(135deg, #FFF8E6 0%, #FFF1CC 100%); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 18px rgba(0,0,0,0.12); border: 3px solid rgba(232, 168, 56, 0.5);">
+      <h3 class="mb-4" style="color: #E8A838; font-size: 1.5rem;">Flex Office/Warehouse</h3>
+      <div style="margin-bottom: 1rem; padding: 1rem; background-color: rgba(232, 168, 56, 0.2); border-radius: 4px;">
+        <div style="font-size: 2rem; font-weight: 700; color: #E8A838;">24.5%</div>
+        <div style="font-size: 0.875rem; color: #555555;">Levered IRR</div>
+      </div>
+      <ul class="text-base" style="color: #555555; list-style: none; margin-left: 0;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(232, 168, 56,0.2);">▸ 22,600 SF in two phases</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(232, 168, 56,0.2);">▸ Higher-yield lease profile</li>
+        <li style="padding: 0.5rem 0;">▸ 9.2% yield on cost</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Site Plan & Elevations -->
+<section id="slide-site-plan" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-4" style="color: #2C5F7B;">Site Plan &amp; Building Elevations</h2>
+  <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex: 1;">
+    <div style="flex: 1; text-align: center;">
+      <p style="font-size: 0.75rem; font-weight: 700; color: #2C5F7B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Conceptual Site Plan</p>
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/072dd88e-c4dc-41e0-bfec-83276e8df25e" style="width: 100%; max-height: 340px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+    </div>
+    <div style="flex: 1; text-align: center;">
+      <p style="font-size: 0.75rem; font-weight: 700; color: #2C5F7B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Building Elevations</p>
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/f65f08f3-91e5-4aaa-bb81-93a2eb1b65be" style="width: 100%; max-height: 340px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+    </div>
+  </div>
+</section>
+<!-- Capital Structure -->
+<section id="slide-capital-structure" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-6" style="color: #2C5F7B; text-shadow: 0 2px 4px rgba(44, 95, 123, 0.1);">Capital Structure</h2>
+  <div style="background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); padding: 2rem; margin-bottom: 1.5rem; border-radius: 8px; box-shadow: 0 5px 16px rgba(0,0,0,0.12);">
+    <div class="chart-bar" style="margin-bottom: 0;">
+      <div class="chart-bar-label" style="color: #555555; top: -28px;">Construction Loan (75%)</div>
+      <div class="chart-bar-fill" style="background: linear-gradient(90deg, #2C5F7B 0%, #1a3a4d 100%); width: 75%; height: 50px; font-size: 1.25rem; color: #ffffff;">$8.1M</div>
+    </div>
+  </div>
+  <div style="background: linear-gradient(135deg, #FFF8E6 0%, #FFF1CC 100%); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 16px rgba(0,0,0,0.12);">
+    <div class="chart-bar" style="margin-bottom: 0;">
+      <div class="chart-bar-label" style="color: #555555; top: -28px;">Equity (25%)</div>
+      <div class="chart-bar-fill" style="background: linear-gradient(90deg, #E8A838 0%, #C08820 100%); width: 25%; height: 50px; font-size: 1.25rem; color: #ffffff;">$2.7M</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:2rem;align-items:center;margin-top:1.5rem;">
+  <div style="flex:1;">
+    <canvas id="donutChart" width="260" height="260"></canvas>
+  </div>
+  <div style="flex:1;">
+    <div style="margin-bottom:1rem;">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+        <div style="width:14px;height:14px;border-radius:50%;background:#2C5F7B;"></div>
+        <span style="font-size:0.875rem;color:#333;"><strong>Construction Loan</strong> — $8.1M (75%)</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <div style="width:14px;height:14px;border-radius:50%;background:#E8A838;"></div>
+        <span style="font-size:0.875rem;color:#333;"><strong>Equity Raise</strong> — $2.7M (25%)</span>
+      </div>
+    </div>
+    <div style="background:#f0f8ff;border-radius:8px;padding:0.75rem;border-left:4px solid #2C5F7B;">
+      <p style="font-size:0.8rem;color:#555;margin:0;">Total Project Cost: <strong style="color:#2C5F7B;">$10.8M</strong> | 8% LP Preferred Return</p>
+    </div>
+  </div>
+</div>
+  <!-- Cost Breakdown (merged from Use of Funds) -->
+  <div style="margin-top:1rem;">
+    <h3 style="font-size:0.85rem;color:#2C5F7B;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">Use of Funds</h3>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;">
+      <div style="background:#f0f5f8;border-radius:6px;padding:0.5rem 0.75rem;border-left:3px solid #4A7C8E;">
+        <div style="font-size:0.7rem;color:#555;">Land</div>
+        <div style="font-size:1rem;font-weight:700;color:#2C5F7B;">$745K</div>
+        <div style="font-size:0.65rem;color:#888;">6.9% of total</div>
+      </div>
+      <div style="background:#f0f5f8;border-radius:6px;padding:0.5rem 0.75rem;border-left:3px solid #2C5F7B;">
+        <div style="font-size:0.7rem;color:#555;">Hard Costs</div>
+        <div style="font-size:1rem;font-weight:700;color:#2C5F7B;">$8.4M</div>
+        <div style="font-size:0.65rem;color:#888;">77.5% of total</div>
+      </div>
+      <div style="background:#f0f5f8;border-radius:6px;padding:0.5rem 0.75rem;border-left:3px solid #5B8A9C;">
+        <div style="font-size:0.7rem;color:#555;">Soft Costs</div>
+        <div style="font-size:1rem;font-weight:700;color:#2C5F7B;">$1.1M</div>
+        <div style="font-size:0.65rem;color:#888;">10.0% of total</div>
+      </div>
+      <div style="background:#fff8e6;border-radius:6px;padding:0.5rem 0.75rem;border-left:3px solid #E8A838;">
+        <div style="font-size:0.7rem;color:#555;">Financing &amp; Carry</div>
+        <div style="font-size:1rem;font-weight:700;color:#C08820;">$610K</div>
+        <div style="font-size:0.65rem;color:#888;">5.6% of total</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Returns Summary -->
+<section id="slide-returns-summary" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-6 text-center" style="color: #2C5F7B; text-shadow: 0 2px 4px rgba(44, 95, 123, 0.1);">Projected LP Returns</h2>
+  <div class="stat-grid">
+    <div class="stat-box" style="background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); border: 3px solid #2C5F7B; box-shadow: 0 0 20px rgba(44, 95, 123, 0.3);">
+      <div class="stat-value" style="color: #2C5F7B;">8.0%</div>
+      <div class="stat-label" style="color: #555555;">Preferred Return</div>
+    </div>
+    <div class="stat-box" style="background: linear-gradient(135deg, #FFF8E6 0%, #FFF1CC 100%); border: 3px solid #C08820; box-shadow: 0 0 20px rgba(192, 136, 32, 0.4);">
+      <div class="stat-value" style="color: #C08820;">21.8%</div>
+      <div class="stat-label" style="color: #555555;">Blended Levered IRR</div>
+    </div>
+    <div class="stat-box" style="background: linear-gradient(135deg, #FFF8E6 0%, #FFF1CC 100%); border: 3px solid #C08820; box-shadow: 0 0 20px rgba(192, 136, 32, 0.4);">
+      <div class="stat-value" style="color: #C08820;">2.49x</div>
+      <div class="stat-label" style="color: #555555;">Equity Multiple</div>
+    </div>
+  </div>
+  <div style="background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); padding: 1.5rem; margin-top: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid rgba(44, 95, 123, 0.2);">
+    <p class="text-lg text-center" style="color: #555555;">5-year hold with optional refinance flexibility | Target exit July 2031</p>
+  </div>
+  <!-- IRR by Scenario + Lease-Up Chart -->
+<div style="display:flex;gap:1.5rem;margin-top:1.5rem;align-items:flex-start;">
+  <!-- IRR Scenario Cards -->
+  <div style="flex:1;">
+    <h3 style="font-size:0.85rem;color:#2C5F7B;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;text-align:center;">IRR by Scenario</h3>
+    <div style="display:flex;gap:0.75rem;">
+      <div class="irr-scenario-card irr-card-bear">
+        <div class="irr-scenario-label" style="color:#ef4444;">Bear</div>
+        <div class="irr-big-num" style="color:#dc2626;">14.2%</div>
+        <div class="irr-sub">7.25% exit cap<br>85% occ.</div>
+      </div>
+      <div class="irr-scenario-card irr-card-base">
+        <div class="irr-scenario-label" style="color:#16a34a;">Base ★</div>
+        <div class="irr-big-num" style="color:#15803d;">21.8%</div>
+        <div class="irr-sub">6.40% exit cap<br>90% occ.</div>
+      </div>
+      <div class="irr-scenario-card irr-card-bull">
+        <div class="irr-scenario-label" style="color:#2563eb;">Bull</div>
+        <div class="irr-big-num" style="color:#1d4ed8;">28.5%</div>
+        <div class="irr-sub">5.75% exit cap<br>93% occ.</div>
+      </div>
+    </div>
+    <p style="font-size:0.7rem;color:#888;margin-top:0.5rem;text-align:center;">All scenarios assume 5-year hold | 8% LP preferred return</p>
+  </div>
+  <!-- Lease-Up Curve -->
+  <div style="flex:1.2;">
+    <h3 style="font-size:0.85rem;color:#2C5F7B;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;text-align:center;">Lease-Up Curve (Months to Stabilization)</h3>
+    <canvas id="leaseupChart" height="160"></canvas>
+  </div>
+</div>
+</section>
+
+<!-- Investment Structure -->
+<section id="slide-investment-structure" class="slide p-16 col" style="background-color: #F8F9FA; color: #333333;">
+  <h2 class="mb-6" style="color: #2C5F7B; text-shadow: 0 2px 4px rgba(44, 95, 123, 0.1);">Investment Terms</h2>
+  <div class="two-col-layout">
+    <div style="background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); padding: 1.5rem; border-radius: 8px; box-shadow: 0 5px 16px rgba(0,0,0,0.12); border: 3px solid rgba(44, 95, 123, 0.4);">
+      <h4 class="mb-4" style="color: #2C5F7B; font-size: 1.25rem;">Structure</h4>
+      <ul class="text-base" style="color: #555555; list-style: none; margin-left: 0;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(44, 95, 123,0.15);">▸ Entity: LLC</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(44, 95, 123,0.15);">▸ GP: KBO4, LLC (10%)</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(44, 95, 123,0.15);">▸ LP: 90% of equity</li>
+        <li style="padding: 0.5rem 0;">▸ Min Investment: $100K</li>
+      </ul>
+    </div>
+    <div style="background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); padding: 1.5rem; border-radius: 8px; box-shadow: 0 5px 16px rgba(0,0,0,0.12); border: 3px solid rgba(44, 95, 123, 0.4);">
+      <h4 class="mb-4" style="color: #2C5F7B; font-size: 1.25rem;">Waterfall</h4>
+      <ul class="text-base" style="color: #555555; list-style: none; margin-left: 0;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(44, 95, 123,0.15);">▸ 8% pref return pari passu</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(44, 95, 123,0.15);">▸ To 15% IRR: 75/25 split</li>
+        <li style="padding: 0.5rem 0;">▸ Above 15%: 55/45 split</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Growth Drivers & Risk Mitigation -->
+<section id="slide-growth-drivers" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-4" style="color: #2C5F7B;">Market Opportunity &amp; Risk Management</h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; flex: 1;">
+    <div style="background: linear-gradient(135deg, #f0f8ff 0%, #e0f0fa 100%); border-radius: 10px; padding: 1.5rem; border-left: 4px solid #2C5F7B;">
+      <h3 style="color: #2C5F7B; font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">&#128200; Market Catalysts</h3>
+      <ul class="text-lg" style="color: #555555;">
+        <li>Active residential development: DR Horton &amp; Fischer Homes projects</li>
+        <li>Major commercial anchors: Costco, Interroll distribution center</li>
+        <li>Municipal infrastructure expansion: sewer &amp; water capacity upgrades</li>
+        <li>High-visibility corridor: 18,900 AADT</li>
+      </ul>
+    </div>
+    <div style="background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%); border-radius: 10px; padding: 1.5rem; border-left: 4px solid #16a34a;">
+      <h3 style="color: #15803d; font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">&#128737; Risk Mitigation</h3>
+      <ul class="text-lg" style="color: #555555;">
+        <li>De-risked entitlements: B-2 zoning with approved storage SUP</li>
+        <li>Phased delivery strategy minimizes lease-up exposure</li>
+        <li>Income diversification: stable storage + higher-yield flex</li>
+        <li>Built-in value cushion: 8.16% YOC vs. 6.4% exit cap</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Sensitivity Analysis -->
+<section id="slide-sensitivity-analysis" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-6 text-center" style="color: #2C5F7B;">Return Sensitivity Analysis</h2>
+  <p class="text-sm text-center mb-4" style="color: #555555;">Base Case: 2.49x Equity Multiple | 6.4% Blended Exit Cap | 24-Month Stabilization</p>
+  <div style="background: linear-gradient(135deg, #ffffff 0%, #F5F8FA 100%); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+      <thead>
+        <tr style="background: linear-gradient(135deg, #2C5F7B 0%, #1a3a4d 100%); color: #ffffff;">
+          <th style="padding: 0.75rem; text-align: center; border: 1px solid rgba(44, 95, 123, 0.3);">Exit Cap Rate →<br>Stabilization ↓</th>
+          <th style="padding: 0.75rem; text-align: center; border: 1px solid rgba(44, 95, 123, 0.3);">5.75%<br>(-10%)</th>
+          <th style="padding: 0.75rem; text-align: center; border: 1px solid rgba(44, 95, 123, 0.3);">6.00%<br>(-5%)</th>
+          <th style="padding: 0.75rem; text-align: center; border: 1px solid rgba(44, 95, 123, 0.3); background-color: #1a3a4d;">6.40%<br>(Base)</th>
+          <th style="padding: 0.75rem; text-align: center; border: 1px solid rgba(44, 95, 123, 0.3);">6.75%<br>(+5%)</th>
+          <th style="padding: 0.75rem; text-align: center; border: 1px solid rgba(44, 95, 123, 0.3);">7.25%<br>(+10%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: #F8F9FA;">
+          <td style="padding: 0.75rem; text-align: center; font-weight: 600; background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); border: 1px solid rgba(44, 95, 123, 0.2);">21.6 mos (-10%)</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #d1fae5; color: #065f46; font-weight: 600;">2.77x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #d1fae5; color: #065f46; font-weight: 600;">2.71x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #d1fae5; color: #065f46; font-weight: 600;">2.63x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.56x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.45x</td>
+        </tr>
+        <tr style="background-color: #ffffff;">
+          <td style="padding: 0.75rem; text-align: center; font-weight: 600; background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); border: 1px solid rgba(44, 95, 123, 0.2);">22.8 mos (-5%)</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #d1fae5; color: #065f46; font-weight: 600;">2.70x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #d1fae5; color: #065f46; font-weight: 600;">2.64x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.56x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.49x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.38x</td>
+        </tr>
+        <tr style="background-color: #F8F9FA;">
+          <td style="padding: 0.75rem; text-align: center; font-weight: 600; background: linear-gradient(135deg, #1a3a4d 0%, #123342 100%); color: #ffffff; border: 1px solid rgba(44, 95, 123, 0.3);">24.0 mos (Base)</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #d1fae5; color: #065f46; font-weight: 600;">2.63x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #FFF1CC; color: #78350f; font-weight: 600;">2.57x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 2px solid #2C5F7B; background-color: #E8A838; color: #ffffff; font-weight: 700;">2.49x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.42x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fed7aa; color: #9a3412; font-weight: 600;">2.31x</td>
+        </tr>
+        <tr style="background-color: #ffffff;">
+          <td style="padding: 0.75rem; text-align: center; font-weight: 600; background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); border: 1px solid rgba(44, 95, 123, 0.2);">25.2 mos (+5%)</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.54x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.48x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.40x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fed7aa; color: #9a3412; font-weight: 600;">2.33x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fed7aa; color: #9a3412; font-weight: 600;">2.22x</td>
+        </tr>
+        <tr style="background-color: #F8F9FA;">
+          <td style="padding: 0.75rem; text-align: center; font-weight: 600; background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); border: 1px solid rgba(44, 95, 123, 0.2);">26.4 mos (+10%)</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.46x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fef3c7; color: #78350f; font-weight: 600;">2.40x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fed7aa; color: #9a3412; font-weight: 600;">2.32x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fed7aa; color: #9a3412; font-weight: 600;">2.25x</td>
+          <td style="padding: 0.75rem; text-align: center; border: 1px solid #e5e7eb; background-color: #fecaca; color: #991b1b; font-weight: 600;">2.14x</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-xs text-center mt-4" style="color: #777777;">Green: Above 2.50x | Yellow: 2.30x-2.50x | Orange/Red: Below 2.30x</p>
+</section>
+
+<!-- Next Steps -->
+<section id="slide-next-steps" class="slide p-16 col" style="background-color: #F8F9FA; color: #333333;">
+  <h2 class="mb-6" style="color: #2C5F7B;">Investment Process</h2>
+  <div style="background: linear-gradient(135deg, #F5F8FA 0%, #E8F0F4 100%); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color: #E8A838; margin-bottom: 0.5rem;">1. Review Documentation</h4>
+      <p style="color: #555555;">Access offering memorandum, operating agreement, and detailed pro forma models</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color: #E8A838; margin-bottom: 0.5rem;">2. Submit Subscription</h4>
+      <p style="color: #555555;">Complete subscription agreement and investor questionnaire</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color: #E8A838; margin-bottom: 0.5rem;">3. Fund Capital</h4>
+      <p style="color: #555555;">Wire equity per capital call schedule</p>
+    </div>
+    <div>
+      <h4 style="color: #E8A838; margin-bottom: 0.5rem;">4. Partnership Admission</h4>
+      <p style="color: #555555;">Formally admitted as LP, preferred return begins accruing</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team & Contact -->
+<section id="slide-team" class="slide p-16 col" style="background-color: #ffffff; color: #333333;">
+  <h2 class="mb-4" style="color: #2C5F7B;">Sponsor Team &amp; Contact</h2>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;">
+    <div style="background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 10px; padding: 1.25rem; border-top: 4px solid #2C5F7B; text-align: center;">
+      <div style="width: 60px; height: 60px; border-radius: 50%; background: #2C5F7B; color: #fff; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">SC</div>
+      <h3 style="color: #2C5F7B; font-size: 0.95rem; margin-bottom: 0.25rem;">Scott Condra</h3>
+      <p style="font-size: 0.75rem; color: #666; margin-bottom: 0.25rem;">Co-Founder &amp; Principal</p>
+      <p style="font-size: 0.7rem; color: #888;">Development, Entitlements &amp; Capital</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 10px; padding: 1.25rem; border-top: 4px solid #2C5F7B; text-align: center;">
+      <div style="width: 60px; height: 60px; border-radius: 50%; background: #2C5F7B; color: #fff; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">BR</div>
+      <h3 style="color: #2C5F7B; font-size: 0.95rem; margin-bottom: 0.25rem;">Brent Reid</h3>
+      <p style="font-size: 0.75rem; color: #666; margin-bottom: 0.25rem;">Co-Founder &amp; Principal</p>
+      <p style="font-size: 0.7rem; color: #888;">Operations, Finance &amp; Investor Relations</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #fff8e6 0%, #fef3cc 100%); border-radius: 10px; padding: 1.25rem; border-top: 4px solid #E8A838; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <h3 style="color: #C08820; font-size: 0.95rem; margin-bottom: 0.75rem;">&#128179; Ready to Invest?</h3>
+      <p style="font-size: 0.8rem; color: #555; margin-bottom: 0.5rem;"><strong>KBO4, LLC</strong></p>
+      <p style="font-size: 0.75rem; color: #555; margin-bottom: 0.25rem;">scondra@condragroup.com</p>
+      <p style="font-size: 0.75rem; color: #555; margin-bottom: 0.75rem;">breid@wintercompanies.com</p>
+      <p style="font-size: 0.7rem; color: #888; text-align: center;">Request full data room including models, operating agreements &amp; subscription docs</p>
+    </div>
+  </div>
+</section>
+<!-- Disclaimer -->
+<section id="slide-disclaimer" class="slide p-16 col" style="background-color: #F8F9FA; color: #333333;">
+  <h2 class="mb-6 text-center" style="color: #2C5F7B;">Important Disclosures</h2>
+  <div style="background: linear-gradient(135deg, #ffffff 0%, #F5F8FA 100%); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <p class="text-sm" style="color: #555555; line-height: 1.6;">
+      Past performance is not indicative of future results. An investment in this project involves a high degree of risk, including the potential loss of all invested capital. This material does not constitute an offer to sell or a solicitation of an offer to buy any securities, which may only be made by means of definitive offering documents and in compliance with applicable securities laws.
+    </p>
+    <p class="text-sm mt-4" style="color: #555555; line-height: 1.6;">
+      Any summaries of terms, returns, or structural features provided herein are for convenience only and are qualified in their entirety by the more detailed descriptions contained in the final operating agreement, subscription documents, and private placement memorandum. Investors should read all such documents carefully and consult with their own legal, tax, and financial advisors prior to making an investment decision.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function() {
+  'use strict';
+
+  // Slide data: id => title label
+  const SLIDES = [
+    { id: 'slide-title',                  label: 'Title' },
+    { id: 'slide-executive-summary',      label: 'Executive Summary' },
+    { id: 'slide-location-site',          label: 'Site Overview & Area Map' },
+    { id: 'slide-market-supply',          label: 'Market Supply' },
+    { id: 'slide-competition-map',        label: 'Competition' },
+    { id: 'slide-project-components',     label: 'Project Components' },
+    { id: 'slide-site-plan',              label: 'Site Plan' },
+    { id: 'slide-capital-structure',      label: 'Capital Structure' },
+    { id: 'slide-returns-summary',        label: 'Returns Summary' },
+    { id: 'slide-investment-structure',   label: 'Investment Structure' },
+    { id: 'slide-growth-drivers',         label: 'Growth Drivers' },
+    { id: 'slide-sensitivity-analysis',   label: 'Sensitivity Analysis' },
+    { id: 'slide-next-steps',             label: 'Next Steps' },
+    { id: 'slide-team',                   label: 'Team' },
+    { id: 'slide-disclaimer',             label: 'Disclaimer' }
+  ];
+
+  let currentIndex = 0;
+
+  // Build nav buttons inside each section
+  function buildNavForSlide(section, index) {
+    const nav = document.createElement('nav');
+    nav.className = 'slide-nav';
+    nav.setAttribute('aria-label', 'Slide navigation');
+
+    const prevBtn = document.createElement('button');
+    prevBtn.type = 'button';
+    prevBtn.innerHTML = '&#8592;';
+    prevBtn.setAttribute('aria-label', 'Previous slide');
+    prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+
+    const counter = document.createElement('span');
+    counter.className = 'slide-counter';
+    counter.id = 'slideCounter';
+
+    const titleLabel = document.createElement('span');
+    titleLabel.className = 'slide-title-label';
+    titleLabel.id = 'slideTitleLabel';
+
+    const nextBtn = document.createElement('button');
+    nextBtn.type = 'button';
+    nextBtn.innerHTML = '&#8594;';
+    nextBtn.setAttribute('aria-label', 'Next slide');
+    nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+    nav.appendChild(prevBtn);
+    nav.appendChild(counter);
+    nav.appendChild(titleLabel);
+    nav.appendChild(nextBtn);
+      // Progress bar
+  const progBar = document.createElement('div');
+  progBar.className = 'progress-bar-container';
+  const progFill = document.createElement('div');
+  progFill.className = 'progress-bar-fill';
+  progFill.style.width = ((index + 1) / SLIDES.length * 100) + '%';
+  progBar.appendChild(progFill);
+  nav.appendChild(progBar);
+    section.appendChild(nav);
+
+    return { prevBtn, nextBtn, counter, titleLabel };
+  }
+
+  // Build sidebar dots
+  const dotsContainer = document.getElementById('slideDots');
+  const navEls = [];
+
+  SLIDES.forEach((slide, index) => {
+    const section = document.getElementById(slide.id);
+    if (!section) { console.warn('Missing slide: ' + slide.id); return; }
+
+    // Add nav to each section
+    const els = buildNavForSlide(section, index);
+    navEls.push(els);
+
+    // Build dot
+    const dot = document.createElement('button');
+    dot.className = 'dot';
+    dot.setAttribute('aria-label', 'Go to slide ' + (index + 1) + ': ' + slide.label);
+    dot.setAttribute('title', slide.label);
+    dot.addEventListener('click', () => goTo(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(index) {
+    if (index < 0 || index >= SLIDES.length) return;
+
+    // Hide current
+    const currentSection = document.getElementById(SLIDES[currentIndex].id);
+    if (currentSection) currentSection.classList.remove('active');
+
+    const currentDot = dotsContainer.children[currentIndex];
+    if (currentDot) currentDot.classList.remove('active');
+
+    currentIndex = index;
+
+    // Show new
+    const newSection = document.getElementById(SLIDES[currentIndex].id);
+    if (newSection) {
+      newSection.classList.add('active');
+      newSection.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }
+
+    const newDot = dotsContainer.children[currentIndex];
+    if (newDot) newDot.classList.add('active');
+
+    // Update all nav bars
+    navEls.forEach(els => {
+      if (!els) return;
+      els.counter.textContent = (currentIndex + 1) + ' / ' + SLIDES.length;
+      els.titleLabel.textContent = SLIDES[currentIndex].label;
+      els.prevBtn.disabled = currentIndex === 0;
+      els.nextBtn.disabled = currentIndex === SLIDES.length - 1;
+    });
+      // Update progress bars
+  document.querySelectorAll('.progress-bar-fill').forEach(f => {
+    f.style.width = ((currentIndex + 1) / SLIDES.length * 100) + '%';
+  });
+      document.dispatchEvent(new Event('slideChanged'));
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      goTo(currentIndex + 1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      goTo(currentIndex - 1);
+    }
+  });
+
+  // Initialize: show first slide
+  goTo(0);
+
+})();
+</script>
+
+<script>
+// ===== DONUT CHART: Capital Structure =====
+function drawDonut() {
+  const c = document.getElementById('donutChart');
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  const cx = c.width/2, cy = c.height/2, r = 90, inner = 55;
+  const data = [{v:0.75,color:'#2C5F7B',label:'Loan 75%'},{v:0.25,color:'#E8A838',label:'Equity 25%'}];
+  let angle = -Math.PI/2;
+  data.forEach(d => {
+    const end = angle + d.v * 2 * Math.PI;
+    ctx.beginPath(); ctx.moveTo(cx,cy);
+    ctx.arc(cx,cy,r,angle,end); ctx.closePath();
+    ctx.fillStyle = d.color; ctx.fill();
+    // label
+    const mid = angle + (end-angle)/2;
+    const lx = cx + (r*0.7)*Math.cos(mid), ly = cy + (r*0.7)*Math.sin(mid);
+    ctx.fillStyle='#fff'; ctx.font='bold 13px sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText(d.label,lx,ly);
+    angle = end;
+  });
+  ctx.beginPath(); ctx.arc(cx,cy,inner,0,2*Math.PI);
+  ctx.fillStyle='#fff'; ctx.fill();
+  ctx.fillStyle='#2C5F7B'; ctx.font='bold 14px sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText('$10.8M',cx,cy-8);
+  ctx.fillStyle='#777'; ctx.font='11px sans-serif';
+  ctx.fillText('Total Cost',cx,cy+10);
+}
+
+// ===== LEASE-UP CHART =====
+function drawLeaseUp() {
+  const c = document.getElementById('leaseupChart');
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  const W = c.offsetWidth || 360;
+  c.width = W;
+  const H = c.height;
+  const months = ['M0','M3','M6','M9','M12','M15','M18','M21','M24'];
+  const storage = [0,12,25,45,60,74,83,88,90];
+  const flex    = [0,8,18,33,50,63,75,84,88];
+  const pad = {l:40,r:20,t:20,b:40};
+  const gw = W-pad.l-pad.r, gh = H-pad.t-pad.b;
+  // grid
+  ctx.strokeStyle='#e5e7eb'; ctx.lineWidth=1;
+  [0,25,50,75,100].forEach(v=>{
+    const y = pad.t + gh*(1-v/100);
+    ctx.beginPath(); ctx.moveTo(pad.l,y); ctx.lineTo(pad.l+gw,y); ctx.stroke();
+    ctx.fillStyle='#999'; ctx.font='10px sans-serif'; ctx.textAlign='right';
+    ctx.fillText(v+'%',pad.l-4,y+3);
+  });
+  // x labels
+  months.forEach((m,i)=>{
+    const x = pad.l + i/(months.length-1)*gw;
+    ctx.fillStyle='#999'; ctx.font='10px sans-serif'; ctx.textAlign='center';
+    ctx.fillText(m,x,H-8);
+  });
+  // draw lines
+  [[storage,'#2C5F7B','Storage'],[flex,'#E8A838','Flex']].forEach(([data,color,label],_i)=>{
+    ctx.beginPath(); ctx.strokeStyle=color; ctx.lineWidth=2.5;
+    data.forEach((v,i)=>{
+      const x=pad.l+i/(months.length-1)*gw, y=pad.t+gh*(1-v/100);
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }); ctx.stroke();
+    // end label
+    const lastX=pad.l+gw, lastY=pad.t+gh*(1-data[data.length-1]/100);
+        ctx.fillStyle=color; ctx.font='bold 10px sans-serif'; ctx.textAlign='right';
+        ctx.fillText(label,lastX-6,lastY+3+(_i*14));
+  });
+  // stabilization line
+  const stabY = pad.t+gh*(1-0.90);
+  ctx.setLineDash([4,4]); ctx.strokeStyle='#888'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(pad.l,stabY); ctx.lineTo(pad.l+gw,stabY); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#888'; ctx.font='10px sans-serif'; ctx.textAlign='left';
+  ctx.fillText('Stabilized (90%)',pad.l+2,stabY-4);
+}
+
+// ===== SENSITIVITY TOOLTIPS =====
+function addSensTooltips() {
+  // equity amounts per cell based on $2.7M equity
+  const equityMap = {
+    '2.71x':'$7.3M return on $2.7M equity','2.49x':'$6.7M return — Base Case','2.28x':'$6.2M return',
+    '2.08x':'$5.6M return','1.88x':'$5.1M return','2.92x':'$7.9M return','2.69x':'$7.3M return',
+    '2.46x':'$6.6M return','2.25x':'$6.1M return','2.04x':'$5.5M return',
+    '3.14x':'$8.5M return','2.89x':'$7.8M return','2.65x':'$7.2M return','2.42x':'$6.5M return','2.19x':'$5.9M return',
+    '3.37x':'$9.1M return','3.10x':'$8.4M return','2.84x':'$7.7M return','2.59x':'$7.0M return','2.35x':'$6.3M return',
+    '3.61x':'$9.8M return','3.32x':'$9.0M return','3.04x':'$8.2M return','2.77x':'$7.5M return','2.51x':'$6.8M return'
+  };
+  document.querySelectorAll('td').forEach(td=>{
+    const txt = td.textContent.trim();
+    if (equityMap[txt]) {
+      td.classList.add('sens-cell');
+      const tip = document.createElement('span');
+      tip.className='sens-tooltip';
+      tip.textContent = equityMap[txt];
+      td.appendChild(tip);
+            // Color coding: green=bull, yellow=base, red=bear
+      const val = parseFloat(txt);
+      if (val >= 3.0) td.style.background = 'linear-gradient(135deg,#d1fae5,#a7f3d0)';
+      else if (val >= 2.49) td.style.background = 'linear-gradient(135deg,#fef9c3,#fde68a)';
+      else td.style.background = 'linear-gradient(135deg,#fee2e2,#fecaca)';
+      td.style.fontWeight = '600';
+    }
+  });
+}
+
+// Run after DOM ready
+document.addEventListener('DOMContentLoaded', ()=>{
+  drawDonut();
+  drawLeaseUp();
+  addSensTooltips();
+});
+// Also run after slide navigation (re-draw when canvas becomes visible)
+document.addEventListener('slideChanged', ()=>{
+  setTimeout(()=>{ drawDonut(); drawLeaseUp(); },50);
+});
+</script>
+</body>
+</html>
